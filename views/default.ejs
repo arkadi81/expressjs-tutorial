@@ -6,14 +6,21 @@
 <% include partials/page/header.ejs %>
 <div class="container">
    
-  <h1><%= title %> 
+  <h1><%= title %></h1> 
   <h3>lorem ipsum</h3>
 
   <!-- display js template using <% %> -->
-  <!-- <% for (var i=0; i<users.length; i++) { %> 
-    <li> <%= users[i] %> </li>
-  <% } %> -->
+  <!-- rolling with the tutorial here but i think its better 
+  to just separate templates and not use conditionals -->
 
+  <% if (typeof(users) !== 'undefined') { %> <!-- conditional content -->
+    <ul>
+      <% for (var i=0; i<users.length; i++) { %> 
+        <li> <%= users[i] %></li>
+      <% } %>
+    </ul>
+  <% } %>
+  <!-- end cond. content -->
   
   <% include partials/page/footer.ejs %>
 </div><!-- container -->  

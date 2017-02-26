@@ -8,6 +8,9 @@ app.set('view engine', 'ejs'); // has to be installed using npm prior
 // app.set('views', __dirname + '/partials');
 // set is used to changes settings. __varname is the global designation, off of app.js 
 
+// locals will be available to all templates
+app.locals.pagetitle = "awesome website yo";
+
 app.get('/', function (req, res) { // request, response callback
   //res.send('<H1>Hello World!</H1>')
   res.render('default', {
@@ -22,7 +25,7 @@ app.get('/about', function (req, res) { // request, response callback
   res.render('default', {
     title: 'About Us',
     classname: 'about',
-    users: ['beep','boop','baap'],
+    //users: ['beep','boop','baap'],
   });
 });
 
