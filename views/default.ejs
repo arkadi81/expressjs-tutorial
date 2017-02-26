@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <% include partials/page/head.ejs %>
+</head>
+<body class="<%= classname %>" >
+<% include partials/page/header.ejs %>
+<div class="container">
+   
+  <h1><%= title %> 
+  <h3>lorem ipsum</h3>
+
+  <!-- display js template using <% %> -->
+  <!-- <% for (var i=0; i<users.length; i++) { %> 
+    <li> <%= users[i] %> </li>
+  <% } %> -->
+
+  
+  <% include partials/page/footer.ejs %>
+</div><!-- container -->  
+
+  
+  <% include partials/page/jsdefaults.ejs %>
+</body>
+</html>
